@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<!--
+		https://learn.microsoft.com/en-us/nuget/consume-packages/Central-Package-Management
+		This will use Directory.Packages.props to manage all package versions
+		The include a package version without the version number
+		<PackageReference Include="System.Text.Json" />
+	-->
+	<PropertyGroup>
+  		<CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
+	</PropertyGroup>
+	<PropertyGroup>
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageVersion Include="System.Text.Json" Version="7.0.3" />
+	</ItemGroup>
+</Project>

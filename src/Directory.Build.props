@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<PropertyGroup>
+		<VersionCount>1</VersionCount>
+		<PackageVersionPrefix>0.0.0</PackageVersionPrefix>
+		<PackageVersion>0.0.0.$(VersionCount)</PackageVersion>
+		<TargetFrameworksLib>netstandard2.0;</TargetFrameworksLib>
+		<TargetFrameworksApp>net8.0</TargetFrameworksApp>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net7.0'))">true</IsAotCompatible>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="$(AssemblyName).Test" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<Authors>Darren King</Authors>
+		<Company>NetPowerON Corp.</Company>
+		<Description></Description>
+		<Copyright>2024</Copyright>
+	</PropertyGroup>
+</Project>
