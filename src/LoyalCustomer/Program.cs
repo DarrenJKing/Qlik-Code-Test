@@ -50,6 +50,8 @@ public class Program
             return result;
         } );
 
+        // Job interview test so I broke it out. Sometimes the next thing asked would be to modify and this provided
+        // layers while also being encapsulated.
         list.Add(
             funcSplit( LogFileDay1Contents )
             .Select( f => new LogRecord( )
