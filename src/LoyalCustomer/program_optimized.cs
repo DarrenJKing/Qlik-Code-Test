@@ -67,17 +67,11 @@ public class Program
 
     private static IEnumerable<string> GetLines( string str )
     {
-        string? line = null;
         using var sr = new StringReader( str );
-        do
+        while( sr.ReadLine( ) is string line )
         {
-            line = sr.ReadLine( );
-            if ( line is not null )
-            {
-                yield return line;
-            }
+            yield return line;
         }
-        while ( line is not null );
     }
 
     // In memory simulation of log file contents for 2 days.
