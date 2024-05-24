@@ -40,7 +40,7 @@ public class Program
 
     private static IEnumerable<IEnumerable<LogRecord>> GetContentOfLogFiles( )
     {
-        foreach ( var stringDay in new List<string> { LogFileDay1Contents, LogFileDay2Contents } )
+        foreach ( var stringDay in ( string[] )[ LogFileDay1Contents, LogFileDay2Contents ] )
         {
             yield return GetLines( stringDay )
                 .Select( line => line?.Split( ',' ) )
